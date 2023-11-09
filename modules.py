@@ -249,7 +249,6 @@ class UNet_conditional(nn.Module):
         output = self.outc(x)
         return output
 
-
 if __name__ == '__main__':
     # net = UNet(device="cpu")
     net = UNet_conditional(num_classes=10, device="cpu")
