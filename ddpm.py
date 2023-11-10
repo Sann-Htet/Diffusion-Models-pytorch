@@ -14,7 +14,7 @@ from torch.utils.tensorboard import SummaryWriter
 logging.basicConfig(format="%(asctime)s - %(levelname)s: %(message)s", level=logging.INFO, datefmt="%I:%M:%S")
 
 class Diffusion:
-    def __init__(self, noise_steps=1000, beta_start=1e-4, beta_end=0.02, img_size=64, device="cpu"):
+    def __init__(self, noise_steps=1000, beta_start=1e-4, beta_end=0.02, img_size=64, device="cuda"):
         self.noise_steps = noise_steps
         self.beta_start = beta_start
         self.beta_end = beta_end
@@ -116,7 +116,7 @@ def launch():
     args.image_size = 64
     args.num_classes = 10
     args.dataset_path = "/home/sann_htet/Downloads/cifar10-32/train"
-    args.device = "cpu"
+    args.device = "cuda"
     args.lr = 3e-4
     train(args)
 
