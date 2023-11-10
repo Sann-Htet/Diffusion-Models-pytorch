@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from torch.utils.data import DataLoader
 
+"""For plotting images"""
 def plot_images(images):
     plt.figure(figsize=(32, 32))
     plt.imshow(torch.cat([
